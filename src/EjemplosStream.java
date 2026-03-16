@@ -5,57 +5,57 @@ import java.util.stream.*;
 public class EjemplosStream {
      public static void main(String[] args) {
           Stream< String > streamEmpty = Stream.empty () ;
-//          System.out.println("streamEmpty count = " + streamEmpty.count());
-//          System.out.println("===============================================================");
-//
-//          Collection < String > collection = Arrays.asList ("a", "b", "c");
-//          Stream < String > streamOfCollection = collection. stream ();
-//          System.out.println("streamOfCollection toList = " + streamOfCollection.collect(Collectors.toList()));
-//          System.out.println("===============================================================");
-//
-//          Stream < String > streamOfCollectionUpper = collection.stream ().map(String::toUpperCase);
-//          System.out.println("streamOfCollection uppercase = " + streamOfCollectionUpper.collect(Collectors.joining(", ")));
-//          System.out.println("===============================================================");
-//
-//          Stream < String > streamBuilder = Stream . < String > builder ().add ("a").add ("b").add ("c").build ();
-//          System.out.println("streamBuilder sorted = " + streamBuilder.sorted().collect(Collectors.toList()));
-//          System.out.println("===============================================================");
-//
-//          Stream < Integer > streamIterated = Stream.iterate (40 , n -> n + 2) . limit (20) ;
-//          System.out.println("streamIterated first 20 = " + streamIterated.collect(Collectors.toList()));
-//          System.out.println("===============================================================");
-//
-//          IntStream intStream = IntStream.range (1 , 3);
-//          System.out.println("intStream range(1,3) = " + intStream.boxed().collect(Collectors.toList()));
-//          System.out.println("===============================================================");
-//
-//          LongStream longStream = LongStream.rangeClosed (1 , 3);
-//          System.out.println("longStream rangeClosed(1,3) = " + longStream.boxed().collect(Collectors.toList()));
-//          System.out.println("===============================================================");
-//
-//          Random rd = new Random ();
-//          DoubleStream doubleStream = rd.doubles (3);
-//          System.out.println("doubleStream random(3) = " + doubleStream.boxed().collect(Collectors.toList()));
-//          System.out.println("===============================================================");
-//
-//          Stream < Integer > stream = Stream.of (1 ,2 ,3 ,4);
-//          System.out.println("stream of sum = " + stream.mapToInt(Integer::intValue).sum());
-//          System.out.println("===============================================================");
-//
-//          List < Integer > myList = new ArrayList <>() ;
-//          for (int i = 0; i < 100; i ++) myList.add ( i ) ;
-//          System.out.println("myList size = " + myList.size());
-//          System.out.println("===============================================================");
-//
-//          // sequential stream
-//          Stream < Integer > sequentialStream = myList.stream () ;
-//          System.out.println("sequentialStream count = " + sequentialStream.count());
-//          System.out.println("===============================================================");
-//
-//          // parallel stream
-//          Stream < Integer > parallelStream = myList.parallelStream () ;
-//          System.out.println("parallelStream count = " + parallelStream.count());
-//          System.out.println("=============================================================");
+          System.out.println("streamEmpty count = " + streamEmpty.count());
+          System.out.println("===============================================================");
+
+          Collection < String > collection = Arrays.asList ("a", "b", "c");
+          Stream < String > streamOfCollection = collection. stream ();
+          System.out.println("streamOfCollection toList = " + streamOfCollection.collect(Collectors.toList()));
+          System.out.println("===============================================================");
+
+          Stream < String > streamOfCollectionUpper = collection.stream ().map(String::toUpperCase);
+          System.out.println("streamOfCollection uppercase = " + streamOfCollectionUpper.collect(Collectors.joining(", ")));
+          System.out.println("===============================================================");
+
+          Stream < String > streamBuilder = Stream . < String > builder ().add ("a").add ("b").add ("c").build ();
+          System.out.println("streamBuilder sorted = " + streamBuilder.sorted().collect(Collectors.toList()));
+          System.out.println("===============================================================");
+
+          Stream < Integer > streamIterated = Stream.iterate (40 , n -> n + 2) . limit (20) ;
+          System.out.println("streamIterated first 20 = " + streamIterated.collect(Collectors.toList()));
+          System.out.println("===============================================================");
+
+          IntStream intStream = IntStream.range (1 , 3);
+          System.out.println("intStream range(1,3) = " + intStream.boxed().collect(Collectors.toList()));
+          System.out.println("===============================================================");
+
+          LongStream longStream = LongStream.rangeClosed (1 , 3);
+          System.out.println("longStream rangeClosed(1,3) = " + longStream.boxed().collect(Collectors.toList()));
+          System.out.println("===============================================================");
+
+          Random rd = new Random ();
+          DoubleStream doubleStream = rd.doubles (3);
+          System.out.println("doubleStream random(3) = " + doubleStream.boxed().collect(Collectors.toList()));
+          System.out.println("===============================================================");
+
+          Stream < Integer > stream = Stream.of (1 ,2 ,3 ,4);
+          System.out.println("stream of sum = " + stream.mapToInt(Integer::intValue).sum());
+          System.out.println("===============================================================");
+
+          List < Integer > myList = new ArrayList <>() ;
+          for (int i = 0; i < 100; i ++) myList.add ( i ) ;
+          System.out.println("myList size = " + myList.size());
+          System.out.println("===============================================================");
+
+          // sequential stream
+          Stream < Integer > sequentialStream = myList.stream () ;
+          System.out.println("sequentialStream count = " + sequentialStream.count());
+          System.out.println("===============================================================");
+
+          // parallel stream
+          Stream < Integer > parallelStream = myList.parallelStream () ;
+          System.out.println("parallelStream count = " + parallelStream.count());
+          System.out.println("=============================================================");
           
           List < Integer > myList2 = new ArrayList < >();
           for (int i = 0; i < 100; i ++) myList2.add ( i ) ;

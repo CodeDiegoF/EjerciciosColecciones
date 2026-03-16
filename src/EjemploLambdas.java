@@ -6,7 +6,7 @@ public class EjemploLambdas {
      public static void main(String[] args) {
           List<String> frutas = Arrays.asList("Manzana", "Naranja", "Limón", "Nípero");
           System.out.println("1º forma: ");
-          frutas.forEach((String a) ->System.out.println(a));
+          frutas.forEach((String a) -> System.out.println(a));
           
           System.out.println("2º forma: ");
           frutas.forEach(fruta -> System.out.println(fruta));
