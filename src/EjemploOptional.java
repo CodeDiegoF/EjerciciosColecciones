@@ -19,8 +19,7 @@ public class EjemploOptional {
           Optional < NotaOptional > oNota = NotaOptional.buscarNotaSobresalienteOptional(notas) ;
           if ( oNota.isPresent () ) {
                NotaOptional nota = oNota.get() ;
-               System . out . println ( nota.getValor () + "-" + nota.getAsignatura ());
-               }
-          
+               System.out.println ( nota.getValor () + "-" + nota.getAsignatura () + " es sobresaliente " ) ;
+          }
      }
 }
