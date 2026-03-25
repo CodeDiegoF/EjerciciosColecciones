@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Nota {
@@ -25,13 +26,13 @@ public class Nota {
           this.valor = valor;
      }
      
-     public static Nota buscarNotaSobresaliente ( List< Nota > notas ) {
-          Nota nota = null ;
+     public static List<Nota> buscarNotaSobresaliente ( List< Nota > notas ) {
+          List<Nota> notasSobresaliente = new ArrayList<>();
           for ( Nota unaNota : notas ) {
-               if ( unaNota . getValor () >= 9) {
-                    nota = unaNota ;
+               if ( unaNota.getValor () >= 9) {
+                    notasSobresaliente.add(unaNota);
                }
           }
-          return nota ;
+          return notasSobresaliente;
      }
 }
